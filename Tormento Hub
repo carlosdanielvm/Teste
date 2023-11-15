@@ -1,0 +1,77 @@
+wait(1)
+
+if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7449423635 then
+	local create = loadstring(game:HttpGet("https://raw.githubusercontent.com/cafehepho300/MaruCrack/main/Theme"))()
+	
+	local Window = create:Win("Tormento Hub")
+	local Tap1 = Window:Taps("General")
+    local Tap4 = Window:Taps("Combat")
+	local Tap2 = Window:Taps("Stats")
+	local Tap3 = Window:Taps("Teleport & Buy")
+	local Tap5 = Window:Taps("Dungeon")
+	local Tap6 = Window:Taps("Misc")
+	
+	local page1 = Tap1:newpage()
+	local page2 = Tap1:newpage()
+	local page3 = Tap2:newpage()
+	local page4 = Tap2:newpage()
+	local page5 = Tap3:newpage()
+	local page6 = Tap3:newpage()
+	local page7 = Tap5:newpage()
+	local page8 = Tap5:newpage()
+	local page9 = Tap4:newpage()
+	local page10 = Tap4:newpage()
+	local page11 = Tap6:newpage()
+	local page12 = Tap6:newpage()
+	
+
+spawn(function()
+	if _G.HideUi then
+		game:GetService("VirtualInputManager"):SendKeyEvent(true,305,false,game.Players.LocalPlayer.Character.HumanoidRootPart)
+	end
+end)
+
+	if not _G.Marine or _G.Pirate then
+		spawn(function()
+			while wait() do
+				if game:GetService("Players")["LocalPlayer"].PlayerGui.Main.ChooseTeam.Visible == true then
+					game:GetService("Players")["LocalPlayer"].PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.Size = UDim2.new(0, 10000, 0, 10000)
+					game:GetService("Players")["LocalPlayer"].PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.Position = UDim2.new(-4, 0, -5, 0)
+					game:GetService("Players")["LocalPlayer"].PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.BackgroundTransparency = 1
+					wait(.5)
+					game:GetService'VirtualUser':Button1Down(Vector2.new(99,99))
+					game:GetService'VirtualUser':Button1Up(Vector2.new(99,99))
+				end     
+			end
+		end)
+	end
+
+	if _G.Marine then
+		spawn(function()
+			while wait() do
+				if game:GetService("Players")["LocalPlayer"].PlayerGui.Main.ChooseTeam.Visible == true then
+					game:GetService("Players")["LocalPlayer"].PlayerGui.Main.ChooseTeam.Container.Marines.Frame.ViewportFrame.TextButton.Size = UDim2.new(0, 10000, 0, 10000)
+					game:GetService("Players")["LocalPlayer"].PlayerGui.Main.ChooseTeam.Container.Marines.Frame.ViewportFrame.TextButton.Position = UDim2.new(-4, 0, -5, 0)
+					game:GetService("Players")["LocalPlayer"].PlayerGui.Main.ChooseTeam.Container.Marines.Frame.ViewportFrame.TextButton.BackgroundTransparency = 1
+					wait(.5)
+					game:GetService'VirtualUser':Button1Down(Vector2.new(99,99))
+					game:GetService'VirtualUser':Button1Up(Vector2.new(99,99))
+				end
+			end
+		end)
+	end
+
+	if _G.Pirate then 
+		spawn(function()
+			while wait() do
+				if game:GetService("Players")["LocalPlayer"].PlayerGui.Main.ChooseTeam.Visible == true then
+					game:GetService("Players")["LocalPlayer"].PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.Size = UDim2.new(0, 10000, 0, 10000)
+					game:GetService("Players")["LocalPlayer"].PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.Position = UDim2.new(-4, 0, -5, 0)
+					game:GetService("Players")["LocalPlayer"].PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.BackgroundTransparency = 1
+					wait(.5)
+					game:GetService'VirtualUser':Button1Down(Vector2.new(99,99))
+					game:GetService'VirtualUser':Button1Up(Vector2.new(99,99))
+				end
+			end
+		end)
+	end
